@@ -7,7 +7,6 @@ function App() {
   const getData = async () => {
     const response = await axios.get("http://jservice.io/api/random?count=1")
     console.log(response.data);
-
     setData(response.data)
   }
   useState(() => {
@@ -22,7 +21,6 @@ function App() {
     <div className="App">
       <AppRouters />
       {data.map(e => <p key={e.id}>Вопрос номер {e.id}</p>)}
-
     </div>
   );
 }
