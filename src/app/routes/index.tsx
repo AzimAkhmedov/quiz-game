@@ -9,7 +9,6 @@ const AppRouters = () => {
             <Routes>
                 <Route path='/' element={<MainPage />} />
                 <Route path='score' element={<ScorePage />} />
-
             </Routes>
         </>
     )
