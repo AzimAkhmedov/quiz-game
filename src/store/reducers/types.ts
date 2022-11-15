@@ -1,3 +1,3 @@
 export  interface scoreTypes{
- value: number
+ score: number
 }
