@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { scoreReducer } from './reducers/scoreSlice';
+import { scoreReducer } from './reducers/score/scoreSlice';
 
 export const store = configureStore({
   reducer: {
