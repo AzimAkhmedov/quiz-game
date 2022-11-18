@@ -19,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <AppRouters />
       {data.map(e => <p key={e.id}>Вопрос номер {e.id}</p>)}
     </div>

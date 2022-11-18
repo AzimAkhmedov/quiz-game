@@ -9,6 +9,6 @@ const initialState:initialQuiz  = {
 
 
 
-  export const getQuiz = createAsyncThunk('quiz' , async ()=>{
-return await getData().then((response)=> response.data[0])
-  })
+//   export const getQuiz = createAsyncThunk('quiz' , async ()=>{
+// return await getData().then((response)=> response.data)
+//   })    
