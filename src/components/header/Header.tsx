@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import "./Header.scss"
 const Header = () => {
+    const [isActive, setIsActive] = useState("")
     return (
         <div className='folder'>
             <nav>
@@ -17,6 +19,14 @@ const Header = () => {
                 </div>
             </nav>
 
+            <aside>
+                <NavLink to={"/"}>
+                    <button>Game</button>
+                </NavLink>
+                <NavLink onClick={(isActive) => { }} to={"/score"}>
+                    <button>Your Score</button>
+                </NavLink>
+            </aside>
         </div>
     )
 }
