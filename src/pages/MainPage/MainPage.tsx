@@ -1,4 +1,3 @@
-import { Button } from '@mui/material'
 import React, { FC } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/hooks/typedHooks'
 import Header from '../../components/header/Header'
@@ -10,12 +9,6 @@ const MainPage: FC = () => {
   return (
     <div >
       <Header />
-      <Button onClick={() => { dispatch(increment(100)) }} variant="contained" > Start Quiz!</Button>
-      <Button onClick={() => { dispatch(decrement()) }} variant="contained" > Minus Quiz!</Button>
-      <Button variant="contained" > Plus Quiz!</Button>
-      <div>
-        {score.score}
-      </div>
     </div>
   )
 }

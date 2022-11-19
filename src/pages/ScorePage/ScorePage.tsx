@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../../components/header/Header'
 
 const ScorePage = () => {
   return (
-    <div>ScorePage</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 
