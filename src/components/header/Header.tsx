@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button } from '@mui/material'
 
 import "./Header.scss"
 const Header = () => {
-    const [isActive, setIsActive] = useState("")
     return (
         <div className='folder'>
             <nav>
@@ -22,10 +21,17 @@ const Header = () => {
             </nav>
 
             <aside>
-                <NavLink to={"/"}>
-                    <Button color='secondary' variant='contained'>Dashboard</Button>
+                <NavLink
+                    to={"/"}
+                    className={isActive =>
+                        (!isActive ? "-active" : "")
+                    }>
+                    <button>Dashboard</button>
                 </NavLink>
-                <NavLink onClick={(isActive) => { }} to={"/score"}>
+                <NavLink
+                    className={isActive =>
+                        (!isActive ? "-active" : "")
+                    } to={"/score"}>
                     <button>Your Score</button>
                 </NavLink>
             </aside>

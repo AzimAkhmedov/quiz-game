@@ -9,6 +9,7 @@ const MainPage: FC = () => {
   return (
     <div >
       <Header />
+      
     </div>
   )
 }
