@@ -3,8 +3,9 @@
     background-color: #FFFFFF;
    nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 60px;
     .nav-item{
         color: #696F79;
         font-family: 'Poppins', sans-serif;
@@ -68,8 +69,10 @@
                  font-size: 18px;
             }
          }
-         .-active{
-            width: 100px;
+         .active{
+            width: 350px;
+            height: 40px;
+            text-decoration:none;
             background-color: #696F79;
                 color: #FFFFFF;
             button{

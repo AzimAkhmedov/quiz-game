@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button } from '@mui/material'
-
 import "./Header.scss"
+
 const Header = () => {
+
+    const [active, setActive] = useState("active-first")
+    useEffect(() => {
+        console.log(active);
+    }, [active])
+
+    const switchElements = () => {
+        if (active === "active-first") {
+            setActive("active-second")
+        } else {
+            setActive("active-first")
+        }
+    }
     return (
         <div className='folder'>
             <nav>
@@ -12,9 +25,7 @@ const Header = () => {
                         Quiz Time
                     </div>
                 </div>
-                <div className="nav-item">
-                    <input type="text" placeholder='Search...' />
-                </div>
+
                 <div className="nav-item">
                     <button>Start Quiz</button>
                 </div>
@@ -23,15 +34,18 @@ const Header = () => {
             <aside>
                 <NavLink
                     to={"/"}
-                    className={isActive =>
-                        (!isActive ? "-active" : "")
+                    onClick={() => { switchElements() }}
+                    className={
+                        active === "active-first" ? "active" : ""
                     }>
                     <button>Dashboard</button>
                 </NavLink>
                 <NavLink
-                    className={isActive =>
-                        (!isActive ? "-active" : "")
-                    } to={"/score"}>
+                    onClick={() => { switchElements() }}
+                    className={
+                        active === "active-second" ? "active" : ""
+                    }
+                    to={"/score"}>
                     <button>Your Score</button>
                 </NavLink>
             </aside>
